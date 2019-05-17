@@ -7,15 +7,10 @@ hello(
     firstname = "Karthik",
 )
 
-#java_library(
-#    name = "hello_java_lib",
-#    srcs = glob(["*.java"]),
-#)
-
-#java_binary(
-#    name = "hello_java_bin",
-#    srcs = glob([":hello",]),
-
-#    main_class = "hello",
-#    #runtime_deps = [":hello_java_lib"],
-#)
+java_binary(
+    name = "helloworld_bin",
+    srcs = [
+        ":hello",  # a generates .java file
+    ],
+    main_class = "bazel.examples.helloworld.hello",
+)

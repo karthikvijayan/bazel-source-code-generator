@@ -24,6 +24,5 @@ hello = rule(
             allow_single_file = True,
         ),
     },
-    outputs = {"source_file": "%{name}.java"},
-    #output_to_genfiles = True,
+    outputs = {"source_file": "src/main/java/bazel/examples/helloworld/%{name}.java"},
 )
